@@ -36,6 +36,10 @@ attemptPromise(fn).then(([error, result]) => {
 });
 ```
 
+### Examples?
+
+I've included [some examples](https://github.com/JFDI-Consulting/attempt/blob/master/example/index.js) in the form of a suite of tests and a simple demo.
+
 ### Why?
 
 **Because I've always hated the ugliness of the `try/catch/finally` construct ever since I first encountered it in C++.**
