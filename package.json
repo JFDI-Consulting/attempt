@@ -1,0 +1,32 @@
+{
+    "name": "@jfdi/attempt",
+    "version": "1.0.0",
+    "description": "Functional error handling implementations for sync & async, to replace try/catch forever",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^7.24.0",
+        "prettier": "^2.2.1",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-plugin-prettier": "^3.3.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./example/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JFDI-Consulting/attempt.git"
+    },
+    "keywords": [
+        "bobb",
+        "mqtt",
+        "iot"
+    ],
+    "author": "Jon Silver",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JFDI-Consulting/attempt/issues"
+    },
+    "homepage": "https://github.com/JFDI-Consulting/attempt#readme"
+}

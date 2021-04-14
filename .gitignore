@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.mp3
+portNumbers.json
+# settings.js
+sounds
+cache
+.env
+bobb-plugin-zwave/zwave/user
+bobb-plugin-zwave/zwave/*.json
+zwave-devices.json
