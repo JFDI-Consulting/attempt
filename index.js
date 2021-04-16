@@ -13,6 +13,8 @@ const attemptPromise = fn => {
 
 // Functional try/catch
 const attempt = fn => {
+    checkFn(fn);
+
     try {
         return success(fn());
     } catch (e) {
