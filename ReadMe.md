@@ -4,7 +4,7 @@
 
 ### Banish the ungainly, scope-bound `try/catch/finally` forever!
 
-This is a very simple, lightweight library to implement functional try/catch everywhere. I found myself copying the code into every single project I wrote, so I decided to make it a proper library.
+This is a very simple, lightweight library to implement functional try/catch everywhere. I found myself copying the code into every single project I wrote, so I decided to make it a proper library. It has no dependencies.
 
 ### Installation
 
