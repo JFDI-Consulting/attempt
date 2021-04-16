@@ -1,6 +1,6 @@
 {
     "name": "@jfdi/attempt",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Functional error handling implementations for sync & async, to replace try/catch forever",
     "main": "index.js",
     "dependencies": {},

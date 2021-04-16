@@ -10,8 +10,6 @@ This is a very simple, lightweight library to implement functional try/catch eve
 
 `npm i @jfdi/attempt`
 
-You'll need some sort of access to the `@jfdi` private scoped repository at `npmjs.com`.
-
 ### Usage
 
 #### For synchronous code...
