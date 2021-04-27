@@ -1,8 +1,8 @@
 const success = r => [null, r];
-const fail = e => [e, null];
+const fail = e => [e, undefined];
 
 const checkFn = fn => {
-    if (typeof fn !== "function") throw Error("fn should be a function!");
+    if (typeof fn !== "function") throw new Error("fn should be a function!");
 };
 
 const attemptPromise = fn => {
@@ -22,4 +22,4 @@ const attempt = fn => {
     }
 };
 
-module.exports = { attempt, attemptPromise, success, fail };
+module.exports = { attempt, attemptPromise };

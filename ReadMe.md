@@ -16,14 +16,14 @@ This is a very simple, lightweight library to implement functional try/catch eve
 
 ```javascript
 const [error, result] = attempt(fn);
-// insert handling codde here
+// insert handling code here
 ```
 
 #### For async code...
 
 ```javascript
 const [error, result] = await attemptPromise(fn);
-// insert handling codde here
+// insert handling code here
 ```
 
 #### or for old style promise handling...
@@ -47,16 +47,21 @@ It's not just an aesthetic thing, although it does make code ugly.
 It's mostly this:
 
 ```javascript
+let success; // a variable ripe for mutation... can't define this inside any scope below or it'll be unavailable in the others
+
 try {
     // Here's one lexical scope...
     // The code to attempt
+    success = true; // mutation
 } catch (e) {
     // Here's another lexical scope...
     // The code to handle the error
+    success = false; // mutation
 } finally {
     // and just because we love all these isolated lexical scopes...
     // Here's the code to run after the whole sorry mess above
+    if (success) console.log("Yay!");
 }
 ```
 
-... and ne'er the three lexical scopes shall meet. Any variable created in the `try` scope won't be available in the `catch` scope, and so on, leading to scoping compromises (like declaring variables before the `try` and mutating them in later scopes) and nasty, messy, hard-to-follow code with masses of boilerplate that goes on and on for pages whilst actually doing very little. Yuk. The solution is `attempt` or `attemptPromise`. Voila. You're welcome.
+... and ne'er the three lexical scopes shall meet. Any variable created in the `try` scope won't be available in the `catch` scope, and so on, leading to scoping compromises (like declaring variables using `let` before the `try` and mutating them in later scopes) and nasty, messy, hard-to-follow code with masses of boilerplate that goes on and on for pages whilst actually doing very little. Yuk. The solution is `attempt` or `attemptPromise`. Voila. You're welcome.
