@@ -1,14 +1,14 @@
 {
     "name": "@jfdi/attempt",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Functional error handling implementations for sync & async, to replace try/catch forever",
     "main": "index.js",
     "dependencies": {},
     "devDependencies": {
-        "eslint": "^7.24.0",
+        "eslint": "^7.25.0",
         "prettier": "^2.2.1",
-        "eslint-config-prettier": "^8.2.0",
-        "eslint-plugin-prettier": "^3.3.1"
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
