@@ -1,4 +1,4 @@
-const success = r => [null, r];
+const success = r => [undefined, r];
 const fail = e => [e, undefined];
 
 const checkFn = fn => {
