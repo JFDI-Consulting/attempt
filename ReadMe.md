@@ -26,7 +26,7 @@ const [error, result] = await attemptPromise(fn);
 // insert handling code here
 ```
 
-### For multiple async...
+#### For multiple async...
 ```javascript
 const [errors, results] = await attemptAllPromise([ fetch(url1), fetch(url2)]);
 // insert handling code here
