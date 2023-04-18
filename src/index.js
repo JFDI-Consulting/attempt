@@ -26,7 +26,7 @@ const checkFn = fn => {
  * @returns {[(Error | undefined), (any | undefined)]}
  * @throws {Error} - Throws an error if the param is not a function
  */
-const attemptPromise = fn => {
+export const attemptPromise = fn => {
     checkFn(fn);
 
     return Promise.resolve().then(fn).then(success).catch(fail);
@@ -39,7 +39,7 @@ const attemptPromise = fn => {
  * @returns {[(Error[] | undefined), (any[])]}
  * @see {attemptPromise}
  */
-const attemptAllPromise = promises => {
+export const attemptAllPromise = promises => {
     const requests = attemptPromise(() => Promise.all(promises));
     const results = [];
     let errors = undefined;
@@ -54,11 +54,11 @@ const attemptAllPromise = promises => {
 
 /**
  * Functional try/catch
- * @param {() => any)} fn
+ * @param {() => any} fn
  * @returns {[(Error | undefined), (any | undefined)]}
  * @throws {Error} - Throws an error if the param is not a function
  */
-const attempt = fn => {
+export const attempt = fn => {
     checkFn(fn);
 
     try {
@@ -67,5 +67,3 @@ const attempt = fn => {
         return fail(e);
     }
 };
-
-module.exports = { attempt, attemptPromise, attemptAllPromise };

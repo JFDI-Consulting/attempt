@@ -1,4 +1,4 @@
-const { attempt, attemptPromise } = require("..");
+const { attempt, attemptPromise } = require("../dist");
 
 const data = [
     { id: 1, name: "Pat", age: 43 },

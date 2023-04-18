@@ -1,4 +1,6 @@
-node_modules
+**/node_modules
+**/build
+**/dist
 npm-debug.log
 .mp3
 portNumbers.json
