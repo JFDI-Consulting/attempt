@@ -6,6 +6,10 @@
 
 This is a very simple, lightweight library to implement functional try/catch everywhere. I found myself copying the code into every single project I wrote, so I decided to make it a proper library. It has no dependencies.
 
+### Breaking Changes since v1.2.x
+
+Removed `attemptAllPromise` because it always caused confusion. I might replace it in future with something better.
+
 ### Installation
 
 `npm i @jfdi/attempt`
@@ -23,12 +27,6 @@ const [error, result] = attempt(fn);
 
 ```javascript
 const [error, result] = await attemptPromise(fn);
-// insert handling code here
-```
-
-#### For multiple async...
-```javascript
-const [errors, results] = await attemptAllPromise([ fetch(url1), fetch(url2)]);
 // insert handling code here
 ```
 
