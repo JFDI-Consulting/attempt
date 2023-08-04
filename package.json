@@ -1,12 +1,12 @@
 {
     "name": "@jfdi/attempt",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "description": "Functional error handling implementations for sync & async, to replace try/catch forever",
     "files": [
         "package.json",
         "dist"
     ],
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "main": "dist/index.js",
     "umd:main": "dist/index.umd.js",
     "module": "dist/index.mjs",

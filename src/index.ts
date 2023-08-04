@@ -1,37 +1,17 @@
-/**
- * @param {any} return
- * @returns {[undefined, any]}
- */
+export type AttemptReturnTuple<T> = [Error | undefined, T | undefined];
+
 const success = r => [undefined, r];
+const fail = (e: Error): [Error, undefined] => [e, undefined];
 
-/**
- * @param {Error | any} error
- * @returns {[Error, undefined]}
- */
-const fail = e => [e, undefined];
-
-/**
- * @param {() => any} fn
- * @throws {Error} - Throws an error if the param is not a function
- */
-const checkFn = fn => {
+const checkFn = (fn: () => any) => {
     if (typeof fn !== "function") throw new Error("fn should be a function!");
 };
 
-/**
- * Runs a Promise for you and returns it as a Tuple
- * Containing an Error & Result
- * Which reduces your codebase size.
- * @param {() => Promise<any>} fn
- * @returns {[(Error | undefined), (any | undefined)]}
- * @throws {Error} - Throws an error if the param is not a function
- */
-export const attemptPromise = fn => {
+export const attemptPromise = <T>(fn: () => Promise<T>): [Error | undefined, T | undefined] => {
     checkFn(fn);
 
     return Promise.resolve().then(fn).then(success).catch(fail);
 };
-
 /**
  * Runs a Promise.all style attemptPromise, returning a Tuple
  * containing an array of Errors & the results of your promise in order.
@@ -39,9 +19,9 @@ export const attemptPromise = fn => {
  * @returns {[(Error[] | undefined), (any[])]}
  * @see {attemptPromise}
  */
-export const attemptAllPromise = promises => {
-    const requests = attemptPromise(() => Promise.all(promises));
-    const results = [];
+export const attemptAllPromise = <T>(promises: Promise<T>[]): [Error[] | undefined, T[]] => {
+    const requests: [Error | undefined, T | undefined][] = attemptPromise(() => Promise.all(promises));
+    const results: T[] = [];
     let errors = undefined;
 
     for (let idx = 0, length = requests.length; idx < length; idx++) {
@@ -58,7 +38,7 @@ export const attemptAllPromise = promises => {
  * @returns {[(Error | undefined), (any | undefined)]}
  * @throws {Error} - Throws an error if the param is not a function
  */
-export const attempt = fn => {
+export const attempt = (fn: () => any): [Error | undefined, any | undefined] => {
     checkFn(fn);
 
     try {
