@@ -1,3 +1,4 @@
+import { expect, test,it,describe } from 'vitest'
 const { attempt, attemptPromise } = require("../dist");
 
 const data = [
@@ -6,12 +7,12 @@ const data = [
 ];
 
 const wait = timeout => new Promise(resolve => setTimeout(resolve, timeout));
-const findName = x => data.find(({ name }) => name === x);
+const findName = (x: string) => data.find(({ name }) => name === x);
 const syncTests = [
-    { name: "Mick's age", fn: () => findName("Mick").age, expected: data[1].age },
-    { name: "Will's age", fn: () => findName("Will").age, expected: "error" },
-    { name: "Smell of Pat", fn: () => findName("Pat").smell, expected: undefined },
-    { name: "Treat an array as a function", fn: () => data(2), expected: "error" }
+    { name: "Mick's age", fn: () => findName("Mick")?.age, expected: data[1].age },
+    { name: "Will's age", fn: () => findName("Will")?.age, expected: "error" },
+    { name: "Smell of Pat", fn: () => findName("Pat")?.["smell"], expected: undefined },
+    { name: "Treat an array as a function", fn: () => Function.apply(data[2].name), expected: "error" }
 ];
 
 const syncResults = syncTests.map(({ name, fn, expected }) => {
