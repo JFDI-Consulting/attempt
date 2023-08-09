@@ -4,7 +4,7 @@
 
 ### Banish the ungainly, scope-bound `try/catch/finally` forever!
 
-This is a very simple, lightweight library to implement functional try/catch everywhere. I found myself copying the code into every single project I wrote, so I decided to make it a proper library. It has no dependencies.
+This is a very simple, lightweight library to implement functional try/catch everywhere. I found myself copying the code into every single project I wrote, so I decided to make it a proper library. It has no dependencies. It's built for both browser and nodeJs use.
 
 ### Breaking Changes since v1.2.x
 
@@ -40,7 +40,7 @@ attemptPromise(fn).then(([error, result]) => {
 
 ### Examples?
 
-I've included [some examples](https://github.com/JFDI-Consulting/attempt/blob/master/example/index.js) in the form of a suite of tests and a simple demo.
+See the tests. They're pretty comprehensive.
 
 ### Why?
 
