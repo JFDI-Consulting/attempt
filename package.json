@@ -1,9 +1,10 @@
 {
     "name": "@jfdi/attempt",
-    "version": "1.3.3",
+    "version": "1.3.6",
     "description": "Functional error handling implementations for sync & async, to replace try/catch forever",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
             "require": "./dist/index.cjs",
