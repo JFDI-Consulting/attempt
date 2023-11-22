@@ -5,6 +5,7 @@
         // Tells TypeScript to read JS files, as
         // normally they are ignored as source files
         "allowJs": false,
+        "strict": true,
         // Generate d.ts files
         "declaration": true,
         // This compiler run should
@@ -18,6 +19,7 @@
         // "Go to Definition" in VSCode
         "declarationMap": true,
         "module": "ESNext",
-        "target": "ESNext"
+        "target": "ESNext",
+        "moduleResolution": "Bundler"
     }
 }

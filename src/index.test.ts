@@ -1,5 +1,5 @@
-import { expect, test, describe, it } from "vitest";
-const { attempt, attemptPromise } = require("../dist/attempt");
+import { expect, describe, it } from "vitest";
+import { attempt, attemptPromise } from "./";
 
 const data = [
     { id: 1, name: "Pat", age: 43 },
@@ -17,6 +17,7 @@ describe("attempt", () => {
     });
 
     it("should return an error for Will's age", () => {
+        // @ts-expect-error
         const [err, result] = attempt(() => findName("Will")["age"]);
         expect(err).not.toBeUndefined();
         expect(result).toBeUndefined();
