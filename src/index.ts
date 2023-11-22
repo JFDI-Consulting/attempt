@@ -1,5 +1,5 @@
 export type AttemptSuccessReturnTuple<T> = [error: undefined, result: T];
-export type AttemptFailReturnTuple<T> = [error: Error, result: undefined] 
+export type AttemptFailReturnTuple<T> = [error: Error, result: undefined];
 export type AttemptReturnTuple<T> = AttemptSuccessReturnTuple<T> | AttemptFailReturnTuple<T>;
 
 const success = <T>(r: T): AttemptSuccessReturnTuple<T> => [undefined, r];
@@ -21,7 +21,7 @@ export const attemptPromise = <T>(fn: () => Promise<T>): Promise<AttemptReturnTu
 /**
  * Functional try/catch
  */
-export const attempt = <T>(fn: () => T): [Error | undefined, T | undefined] => {
+export const attempt = <T>(fn: () => T): AttemptReturnTuple<T> => {
     checkFn(fn);
 
     try {
