@@ -38,6 +38,58 @@ attemptPromise(fn).then(([error, result]) => {
 });
 ```
 
+### TypeScript Support
+
+As of v1.4.0, you can now type both the result **and** the error with custom types:
+
+#### Basic TypeScript usage
+
+```typescript
+import { attempt, attemptPromise } from '@jfdi/attempt';
+
+// Type just the result (error defaults to Error)
+const [error, result] = attempt<string>(() => "success");
+
+// Type both result and error
+class ValidationError extends Error {
+    code: number;
+}
+
+const [error, result] = attempt<User, ValidationError>(() => {
+    // your code here
+});
+
+// Now TypeScript knows:
+// - error is ValidationError | undefined
+// - result is User | undefined
+```
+
+#### Async with custom error types
+
+```typescript
+const [error, data] = await attemptPromise<ApiResponse, ApiError>(
+    async () => await fetchData()
+);
+
+if (error) {
+    // error is typed as ApiError
+    console.error(error.statusCode, error.message);
+} else {
+    // data is typed as ApiResponse
+    console.log(data.results);
+}
+```
+
+#### Backward compatibility
+
+The error type parameter defaults to `Error`, so existing code continues to work without changes:
+
+```typescript
+// These are equivalent:
+const [err, res] = attempt<string>(() => "hello");
+const [err, res] = attempt<string, Error>(() => "hello");
+```
+
 ### Examples?
 
 See the tests. They're pretty comprehensive.
