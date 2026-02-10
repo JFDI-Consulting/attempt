@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Example: `attempt<User, ValidationError>(() => ...)`
 - Package metadata:
   - `sideEffects: false` for better tree-shaking support
-  - `engines` field specifying Node.js >= 18.0.0
+  - `engines` field specifying Node.js ^20.19.0 || >=22.12.0
 
 ### Changed
 - **Major dependency upgrades**:
