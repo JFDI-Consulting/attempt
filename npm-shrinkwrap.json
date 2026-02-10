@@ -27,6 +27,9 @@
                 "vite-plugin-dts": "^4.5.4",
                 "vite-plugin-static-copy": "^3.1.4",
                 "vitest": "^4.0.9"
+            },
+            "engines": {
+                "node": ">=18.0.0"
             }
         },
         "node_modules/@aashutoshrathi/word-wrap": {
@@ -1145,19 +1148,6 @@
             "integrity": "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==",
             "dev": true,
             "license": "MIT"
-        },
-        "node_modules/@rollup/pluginutils/node_modules/picomatch": {
-            "version": "4.0.3",
-            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz",
-            "integrity": "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==",
-            "dev": true,
-            "license": "MIT",
-            "engines": {
-                "node": ">=12"
-            },
-            "funding": {
-                "url": "https://github.com/sponsors/jonschlinkert"
-            }
         },
         "node_modules/@rollup/rollup-android-arm-eabi": {
             "version": "4.53.2",
@@ -2359,6 +2349,19 @@
             },
             "engines": {
                 "node": ">= 8"
+            }
+        },
+        "node_modules/anymatch/node_modules/picomatch": {
+            "version": "2.3.1",
+            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz",
+            "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==",
+            "dev": true,
+            "license": "MIT",
+            "engines": {
+                "node": ">=8.6"
+            },
+            "funding": {
+                "url": "https://github.com/sponsors/jonschlinkert"
             }
         },
         "node_modules/arg": {
@@ -3667,6 +3670,19 @@
                 "node": ">=8.6"
             }
         },
+        "node_modules/micromatch/node_modules/picomatch": {
+            "version": "2.3.1",
+            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz",
+            "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==",
+            "dev": true,
+            "license": "MIT",
+            "engines": {
+                "node": ">=8.6"
+            },
+            "funding": {
+                "url": "https://github.com/sponsors/jonschlinkert"
+            }
+        },
         "node_modules/minimatch": {
             "version": "3.1.2",
             "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
@@ -3924,13 +3940,13 @@
             "license": "ISC"
         },
         "node_modules/picomatch": {
-            "version": "2.3.1",
-            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz",
-            "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==",
+            "version": "4.0.3",
+            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz",
+            "integrity": "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==",
             "dev": true,
             "license": "MIT",
             "engines": {
-                "node": ">=8.6"
+                "node": ">=12"
             },
             "funding": {
                 "url": "https://github.com/sponsors/jonschlinkert"
@@ -4072,6 +4088,19 @@
             },
             "engines": {
                 "node": ">=8.10.0"
+            }
+        },
+        "node_modules/readdirp/node_modules/picomatch": {
+            "version": "2.3.1",
+            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz",
+            "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==",
+            "dev": true,
+            "license": "MIT",
+            "engines": {
+                "node": ">=8.6"
+            },
+            "funding": {
+                "url": "https://github.com/sponsors/jonschlinkert"
             }
         },
         "node_modules/require-from-string": {
@@ -4514,19 +4543,6 @@
                 "url": "https://github.com/sponsors/SuperchupuDev"
             }
         },
-        "node_modules/tinyglobby/node_modules/picomatch": {
-            "version": "4.0.3",
-            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz",
-            "integrity": "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==",
-            "dev": true,
-            "license": "MIT",
-            "engines": {
-                "node": ">=12"
-            },
-            "funding": {
-                "url": "https://github.com/sponsors/jonschlinkert"
-            }
-        },
         "node_modules/tinyrainbow": {
             "version": "3.0.3",
             "resolved": "https://registry.npmjs.org/tinyrainbow/-/tinyrainbow-3.0.3.tgz",
@@ -4793,19 +4809,6 @@
                 "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
             }
         },
-        "node_modules/vite/node_modules/picomatch": {
-            "version": "4.0.3",
-            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz",
-            "integrity": "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==",
-            "dev": true,
-            "license": "MIT",
-            "engines": {
-                "node": ">=12"
-            },
-            "funding": {
-                "url": "https://github.com/sponsors/jonschlinkert"
-            }
-        },
         "node_modules/vitest": {
             "version": "4.0.9",
             "resolved": "https://registry.npmjs.org/vitest/-/vitest-4.0.9.tgz",
@@ -4882,19 +4885,6 @@
                 "jsdom": {
                     "optional": true
                 }
-            }
-        },
-        "node_modules/vitest/node_modules/picomatch": {
-            "version": "4.0.3",
-            "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz",
-            "integrity": "sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==",
-            "dev": true,
-            "license": "MIT",
-            "engines": {
-                "node": ">=12"
-            },
-            "funding": {
-                "url": "https://github.com/sponsors/jonschlinkert"
             }
         },
         "node_modules/vscode-uri": {
