@@ -19,10 +19,10 @@ if [[ ! "$VERSION_ARG" =~ ^(patch|minor|major|[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
     exit 1
 fi
 
-# Ensure we're on master
+# Ensure we're on main
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [[ "$BRANCH" != "master" && "$BRANCH" != "main" ]]; then
-    echo "Error: must be on master or main branch (currently on $BRANCH)"
+if [[ "$BRANCH" != "main" ]]; then
+    echo "Error: must be on main branch (currently on $BRANCH)"
     exit 1
 fi
 
